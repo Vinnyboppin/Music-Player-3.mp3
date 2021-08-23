@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Music Website - Mark Evison Project</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="media/logo.png" class="logo">    <!--logos-->
+            </div>
+            <div class="content">
+                <div class="left-col">  
+                    <h1>MUSIC FOR ALL</h1>
+                    <p>Music source: Prod. Riddiman - https://www.youtube.com/channel/UCdSuKogXJOZld5Dzw_9285w</p>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="media/play.png" id="icon">   <!--play icon-->
+            </div>
+        </div>
+    </div>
+
+    <audio id="mySong">
+
+        <source src="media/song.mp3" type="audio/mp3">    <!--source of the audio file-->
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon= document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){                                                                             
+                mySong.play();
+                icon.src = "media/pause.png";     //song playing      
+
+            }else{
+                mySong.pause();
+                icon.src = "media/play.png";      //song paused
+            }   
+        }
+
+    </script>
+
+</body>
+</html>
